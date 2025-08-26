@@ -1,0 +1,426 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Fira Sans', sans-serif;
+}
+body{
+    margin: 0;
+}
+/****************************
+        Navbar Start Here
+*****************************/
+h1{
+    font-size: 2.5rem;
+    text-align: center;
+}
+h2{
+    font-size: 1.5rem;
+    text-align: center;
+}
+a{
+    color: white;
+    font-size: 1.3rem;
+    text-decoration: none;
+}
+p{
+    font-size: 1.2rem;
+    text-align: center;
+}
+.dotted-hr{
+    border: 6px dotted white;
+    border-bottom: none;
+    width: 100px;
+    margin: 0 auto;
+    
+}
+[class*="col-"]{
+    float: left;
+    padding: 10px;
+}
+/*For Mobile*/
+[class*="col-"]{
+    width: 100%;
+}
+.navbar{
+    padding: 1% 5.3%;
+    text-align: center;
+    background-color: #39a4ac;
+}
+.navbar .navbar-logo img{
+    height: 65px;
+    width: 110px;
+    border-radius: 15px;
+    margin-top: 5px;
+    transition: all 0.3s;
+}
+
+.navbar .navbar-logo img:hover {
+    transform: skew(-8deg);
+}
+
+.navbar h1{
+    color: white;
+    margin: 0;
+    padding-top: 14px;
+}
+.navbar-menu{
+    display: flex;
+    flex-direction: column;
+}
+.navbar-menu a{
+    background-color: #0c6168;
+    border-radius: 10px;
+    margin: 7px;
+    padding: 10px;
+    transition: 0.2s;
+}
+.navbar-menu a:hover{
+    background-color: gray;
+}
+.navbar::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+/****************************
+        Navbar End Here
+*****************************/
+/****************************
+        Profile Start Here
+*****************************/
+.profile{
+    padding: 120px 10px;
+    position: relative;
+    text-align: center;
+}
+.profile .profile-desc{
+    margin: 50px 0;
+}
+.profile .profile-desc h1{
+    font-family: 'Satisfy', cursive;
+    transition: 0.4s;
+}
+.profile .profile-desc h1:hover{
+    font-size: 2.8rem;
+}
+.profile-desc p{
+    color: gray;
+    margin: 0 auto 20px auto;
+    text-align: center;
+    width: 90%;
+}
+.profile .top-weather-icon{             /*Top icon*/
+    position: absolute;
+    right: 10%;
+    top: 20px;
+    transition: transform 2s;
+}
+.profile .top-weather-icon:hover{
+    transform: rotate(360deg);
+}
+
+.profile .bottom-weather-icon{          /*Bottom icon*/
+    position: absolute;
+    left: 10%;
+    bottom: 20px;
+    transition: transform 2s;
+}
+.profile .bottom-weather-icon:hover{
+    transform: rotate(360deg);
+}
+.profile::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+/****************************
+        Profile End Here
+*****************************/
+/****************************
+About me design start here
+*****************************/
+.about-me{
+    background-color: #39a4ac;
+    padding: 1% 7%;
+    color: white;
+    text-align: center;
+}
+.aboutme-image img{
+    width: 230px;
+    border: 5px solid white;
+    border-radius: 50%;
+    margin-top: 30px;
+}
+.about-me .aboutme-desc p{
+    text-align: center;
+}
+.facebook-a{
+    text-decoration: underline;
+    color: rgb(163, 69, 69);
+}
+.aboutme-desc p span{
+    color: yellow;
+    font-weight: bold;
+}
+.cv-button{
+    background-color: #052d0f;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    margin: 10px;
+}
+
+.about-me::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+/****************************
+About me design end here
+*****************************/
+/*********************************
+Professional Experience start here
+**********************************/
+/* .professional-experience {
+    padding: 20px;
+} */
+.professional-experience .card{
+    background: linear-gradient(#00b09b,rgb(162, 201, 235));
+
+    border-radius: 10px;
+    padding: 10px;
+    transition: 0.3s;
+    height: 650px;
+    scale: 0.95;
+}
+.professional-experience .card:hover{
+    box-shadow: 0 4px 8pX 5px grey;
+}
+.card-icon{
+    text-align: center;
+}
+.card-icon img{
+    width: 85px;
+    margin-top: 10px;
+}
+.rounded-img{
+    border: 5px solid white;
+    border-radius: 50%;
+    padding: 8px;
+}
+.card-title h2{
+    background-color: #616161;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+.work-experience .card-desc{
+    
+}
+.skills-container{          /*Skill Section Start*/
+    padding-right: 40px;
+}
+.skills-container li{
+    list-style: none;
+    font-weight: bold;
+    margin: 30px 10px;
+    text-transform: uppercase;
+    position: relative;
+}
+.skills-container li::before{
+    content: '';
+    position: absolute;
+    background-color: rgb(86, 86, 153,.5);
+    width: 100%;
+    height: 12px;
+    left: 0%;
+    border-radius: 1000px;
+    top: calc(100% + 5px);
+}
+.skills-container li::after{
+    content: '';
+    position: absolute;
+    background-color: rgb(86, 86, 153, 1);
+    width: 0;
+    height: 12px;
+    left: 0%;
+    border-radius: 1000px;
+    top: calc(100% + 5px);
+
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+.skills-container li.html::after{
+    animation-name: html;
+}
+@keyframes html {
+    to{
+        width: 90%;
+    }
+}
+
+.skills-container li.css::after{
+    animation-name: css;
+}
+@keyframes css {
+    to{
+        width: 80%;
+    }
+}
+
+.skills-container li.js::after{
+    animation-name: js;
+}
+@keyframes js {
+    to{
+        width: 70%;
+    }
+}
+
+.skills-container li.jquary::after{
+    animation-name: jquary;
+}
+@keyframes jquary {
+    to{
+        width: 80%;
+    }
+
+}.skills-container li.tailwind::after{
+    animation-name: tailwind;
+}
+@keyframes tailwind {
+    to{
+        width: 90%;
+    }
+}
+
+.skills-container li.express::after{
+    animation-name: express;
+}
+@keyframes express {
+    to{
+        width: 80%;
+    }
+}
+
+.skills-container li.react::after{
+    animation-name: react;
+}
+@keyframes react {
+    to{
+        width: 70%;
+    }
+}
+
+.skills-container li.nodejs::after{
+    animation-name: nodejs;
+}
+@keyframes nodejs {
+    to{
+        width: 80%;
+    }
+}
+
+.professional-experience::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+/*********************************
+Professional Experience end here
+**********************************/
+/*********************************
+Achivement Contact Start From Here
+**********************************/
+.achivement-contact{
+    padding: 1% 6%;
+    background-color: #39a4ac;
+    color: white;
+}
+.contact{
+    padding: 1% 1%;
+    text-align: center;
+}
+.contact form{
+}
+.contact input, textarea{
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    resize: none;
+}
+.contact button{
+    border: none;
+    border-radius: 12px;
+    background-color: rgb(90, 86, 86);
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    margin: 10px;
+    width: 100px;
+}
+.contact-links{
+    text-align: center;
+}
+.media-buttons .btn{
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 32px;
+    padding: 5px;
+    margin: 10px;
+    width: 50px;
+    transition: 0.3s;
+}
+.media-buttons button:hover{
+    background-color: gray;
+}
+
+
+.achivement-contact::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+/*********************************
+    Achivement Contact End Here
+**********************************/
+/*********************************
+    Footer Start from Here
+**********************************/
+.footer{
+    background-color: black;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    
+}
+.footer-menu a{
+    display: block;
+    margin: 15px 0;
+    font-size: 1.1rem;
+    color: yellow;
+}
+.footer-menu a:hover{
+    color: yellowgreen;
+}
+
+
+.footer::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+/*********************************
+    Footer End Here
+**********************************/
